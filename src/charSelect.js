@@ -18,13 +18,13 @@ export function initCharSelect(onEnter) {
   const previewScene = new THREE.Scene();
   previewScene.background = null;
 
-  const previewCamera = new THREE.PerspectiveCamera(32, 280 / 360, 0.1, 10);
-  previewCamera.position.set(0, 1.1, 3.0);
-  previewCamera.lookAt(0, 1.0, 0);
+  const previewCamera = new THREE.PerspectiveCamera(28, 220 / 280, 0.1, 10);
+previewCamera.position.set(0, 1.0, 3.6);
+previewCamera.lookAt(0, 0.95, 0);
 
   const previewRenderer = new THREE.WebGLRenderer({ canvas: canvasEl, alpha: true, antialias: true });
   previewRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  previewRenderer.setSize(280, 360, false);
+  previewRenderer.setSize(220, 280, false);
 
   previewScene.add(new THREE.AmbientLight(0xffffff, 0.8));
   const previewLight = new THREE.DirectionalLight(0xffffff, 0.9);
